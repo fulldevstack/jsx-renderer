@@ -1,7 +1,7 @@
 /**
  * This is a *very* simple jsx factory for typescript to transpile jsx
- * It was fun to put together but I don't see myself substituting this for react any time soon
- * I created this as both a learning experience and because the assignment specifically stated not to use libraries
+ * It has limitations like being unable to handle SVG's but it was built as part
+ * of a project to display skills and as a quick learning experience
  */
 namespace Renderer {
   /* Only supports functional components */
@@ -110,7 +110,8 @@ namespace Renderer {
 /**
  * Declare the JSX namespace in global scope for the Typescript compiler
  * Supposedly this doesn't have to go in global scope but I couldn't get tsc to pick
- * it up otherwise and I didn't want to spend too much time on it
+ * it up otherwise and I didn't want to spend too much time on it.
+ * It is worth noting that React has or at least had this declared in global scope as well
  */
 declare global {
   /**
